@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ppdm_school</string>
+    <string name="logo">logo</string>
+    <string name="titulo">Lion\nSchool</string>
+    <string name="subtitulo">Encontre seu curso favorito</string>
+    <string name="descricao">Chegue mais rápido ao seu destino, estude na melhor escola profissionalizante do Brasil. Seja a melhor versão de si mesmo.</string>
+    <string name="button_start">Começar</string>
+    <string name="youtube">Youtube</string>
+    <string name="twitter">Twitter</string>
+    <string name="instagram">Instagram</string>
+    <string name="facebook">Facebook</string>
+</resources>
