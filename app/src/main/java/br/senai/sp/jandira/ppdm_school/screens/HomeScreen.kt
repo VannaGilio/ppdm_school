@@ -207,5 +207,4 @@ fun HomeScreen() {
 @Composable
 private fun HomeScreenPreview() {
     HomeScreen()
-
 }

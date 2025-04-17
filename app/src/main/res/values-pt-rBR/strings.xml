@@ -10,4 +10,8 @@
     <string name="twitter">Twitter</string>
     <string name="instagram">Instagram</string>
     <string name="facebook">Facebook</string>
+    <string name="sigla_ds">DS</string>
+    <string name="ds">Desenvolvimento de Sistemas</string>
+    <string name="rds">Redes de Computadores</string>
+    <string name="ele">Eletroeletrônica</string>
 </resources>
