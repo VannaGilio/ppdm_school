@@ -37,9 +37,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.senai.sp.jandira.ppdm_school.R
 import br.senai.sp.jandira.ppdm_school.screens.components.CardCurses
+import br.senai.sp.jandira.ppdm_school.screens.components.CardStudents
 
 @Composable
-fun CursesScreen (){
+fun StudentsScreen (){
     Box (
         modifier = Modifier
             .fillMaxSize()
@@ -132,26 +133,12 @@ fun CursesScreen (){
                     fontWeight = FontWeight.Bold
                 )
             }
-            CardCurses(
-                iconCurse = painterResource(R.drawable.ds),
-                siglaCurse = stringResource(R.string.sigla_ds),
-                curse = stringResource(R.string.ds),
-                descCurse = stringResource(R.string.descricao_ds),
-                workloadCurse = stringResource(R.string.week_ds)
-            )
-            CardCurses(
-                iconCurse = painterResource(R.drawable.rds),
-                siglaCurse = stringResource(R.string.sigla_rds),
-                curse = stringResource(R.string.rds),
-                descCurse = stringResource(R.string.descricao_rds),
-                workloadCurse = stringResource(R.string.week_rds)
-            )
-            CardCurses(
-                iconCurse = painterResource(R.drawable.ele),
-                siglaCurse = stringResource(R.string.sigla_ele),
-                curse = stringResource(R.string.ele),
-                descCurse = stringResource(R.string.descricao_ele),
-                workloadCurse = stringResource(R.string.week_ele)
+            CardStudents(
+                iconStudent = painterResource(R.drawable.pessoa1),
+                nameStudent = stringResource(R.string.nome_1),
+                iconRm = painterResource(R.drawable.rm),
+                rmStudent = stringResource(R.string.rm_1),
+                registration= stringResource((R.string.registration_1))
             )
         }
     }
@@ -160,5 +147,5 @@ fun CursesScreen (){
 @Preview(showSystemUi = true)
 @Composable
 private fun CursesScreenPreview() {
-    CursesScreen()
+    StudentsScreen()
 }
