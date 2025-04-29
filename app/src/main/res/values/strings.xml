@@ -23,6 +23,7 @@
     <string name="week_ele">3 Week</string>
     <string name="input_curse">Find your course</string>
     <string name="list_curses">Courses</string>
+    <string name="list_students">Students List</string>
     <string name="registration_1">2022</string>
     <string name="registration_2">2022</string>
     <string name="registration_3">2025</string>
@@ -38,4 +39,15 @@
     <string name="nome_6">Pedro Xavier</string>
     <string name="nome_7">Pedro Xavier</string>
     <string name="rm_1">20151001018</string>
+    <string name="button_todos">All</string>
+    <string name="button_cursando">Studying</string>
+    <string name="button_finalizado">Finished</string>
+    <string name="student_course">001 - Técnico em Desenvolvimento de Sistemas</string>
+    <string name="desempenho">Desempenho</string>
+    <string name="siop">SIOP</string>
+    <string name="inri">INRI</string>
+    <string name="innu">INNU</string>
+    <string name="ha">HA</string>
+    <string name="sere">SERE</string>
+    <string name="caes">CAES</string>
 </resources>

@@ -36,7 +36,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.senai.sp.jandira.ppdm_school.R
 import br.senai.sp.jandira.ppdm_school.screens.CursesScreen
 
 @Composable
@@ -52,13 +51,9 @@ fun CardStudents(
             .fillMaxWidth()
             .height(80.dp),
     ) {
-        Column(
+        Box(
             modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    color = Color(0xFF9FA9E1)
-                ),
-            verticalArrangement = Arrangement.Center
+                .background(Color(0xFF9FA9E1))
         ) {
             Row(
                 modifier = Modifier
@@ -79,12 +74,12 @@ fun CardStudents(
                         .fillMaxSize()
                         .padding(horizontal = 10.dp),
                     verticalAlignment = Alignment.CenterVertically
-                ){
+                ) {
                     Image(
                         painter = iconStudent,
                         contentDescription = "",
                         modifier = Modifier
-                            .size(45.dp)
+                            .size(50.dp)
                     )
                     Column(
                         modifier = Modifier
@@ -119,15 +114,29 @@ fun CardStudents(
                         }
                     }
                 }
-                Row {
-                    Icon(
-                        modifier = Modifier
-                            .size(20.dp),
-                        imageVector = Icons.Default.DateRange,
-                        contentDescription = "",
-                        tint = Color(0xFFEAE8E5)
-                    )
-                }
+            }
+            Row(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(10.dp),
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.Bottom
+            ) {
+                Icon(
+                    modifier = Modifier
+                        .size(16.dp),
+                    imageVector = Icons.Default.DateRange,
+                    contentDescription = "",
+                    tint = Color(0xFFFFFFFF)
+                )
+                Text(
+                    modifier = Modifier
+                        .padding(horizontal = 2.dp),
+                    text = registration,
+                    color = Color(0xFFFFC23D),
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Bold
+                )
             }
         }
     }

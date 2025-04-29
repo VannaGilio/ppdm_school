@@ -1,5 +1,6 @@
 package br.senai.sp.jandira.ppdm_school.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,6 +19,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedTextField
@@ -32,6 +35,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -40,24 +44,24 @@ import br.senai.sp.jandira.ppdm_school.screens.components.CardCurses
 import br.senai.sp.jandira.ppdm_school.screens.components.CardStudents
 
 @Composable
-fun StudentsScreen (){
-    Box (
+fun StudentsScreen() {
+    Box(
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFFFFFFF))
-    ){
-        Column (
+    ) {
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(15.dp)
                 .background(Color(0xFFFFFFFF)),
-            verticalArrangement = Arrangement.SpaceBetween
-        ){
-            Row (
+            verticalArrangement = Arrangement.SpaceEvenly
+        ) {
+            Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(70.dp)
-            ){
+                    .height(70.dp),
+            ) {
                 Image(
                     painter = painterResource(
                         R.drawable.logo
@@ -100,7 +104,7 @@ fun StudentsScreen (){
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
-                    .padding(top = 5.dp),
+                    .padding(vertical = 5.dp),
                 shape = RoundedCornerShape(8.dp),
                 leadingIcon = {
                     Icon(
@@ -110,15 +114,64 @@ fun StudentsScreen (){
                     )
                 }
             )
-            Row (
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+            ) {
+                Button(
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xFF3347B0)),
+                    onClick = {}
+                ) {
+                    Text(
+                        textAlign = TextAlign.Center,
+                        color = Color(0xFFFFC23D),
+                        fontSize = 20.sp,
+                        text = stringResource(
+                            R.string.button_todos
+                        )
+                    )
+                }
+                Button(
+                    modifier = Modifier
+                        .padding(horizontal = 8.dp),
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xFFFFC23D)),
+                    onClick = {}
+                ) {
+                    Text(
+                        textAlign = TextAlign.Center,
+                        color = Color(0xFF3347B0),
+                        fontSize = 20.sp,
+                        text = stringResource(
+                            R.string.button_cursando
+                        )
+                    )
+                }
+                Button(
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(Color(0xFFFFC23D)),
+                    onClick = {}
+                ) {
+                    Text(
+                        textAlign = TextAlign.Center,
+                        color = Color(0xFF3347B0),
+                        fontSize = 20.sp,
+                        text = stringResource(
+                            R.string.button_finalizado
+                        )
+                    )
+                }
+            }
+            Row(
                 modifier = Modifier
                     .padding(top = 8.dp)
                     .fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
-            ){
+            ) {
                 Image(
                     painter = painterResource(
-                        R.drawable.list
+                        R.drawable.gradu
                     ),
                     contentDescription = "",
                     modifier = Modifier
@@ -126,7 +179,7 @@ fun StudentsScreen (){
                 )
                 Text(
                     text = stringResource(
-                        R.string.list_curses
+                        R.string.list_students
                     ),
                     color = Color(0xFF3347B0),
                     fontSize = 20.sp,
@@ -138,7 +191,42 @@ fun StudentsScreen (){
                 nameStudent = stringResource(R.string.nome_1),
                 iconRm = painterResource(R.drawable.rm),
                 rmStudent = stringResource(R.string.rm_1),
-                registration= stringResource((R.string.registration_1))
+                registration = stringResource((R.string.registration_1))
+            )
+            CardStudents(
+                iconStudent = painterResource(R.drawable.pessoa1),
+                nameStudent = stringResource(R.string.nome_1),
+                iconRm = painterResource(R.drawable.rm),
+                rmStudent = stringResource(R.string.rm_1),
+                registration = stringResource((R.string.registration_1))
+            )
+            CardStudents(
+                iconStudent = painterResource(R.drawable.pessoa1),
+                nameStudent = stringResource(R.string.nome_1),
+                iconRm = painterResource(R.drawable.rm),
+                rmStudent = stringResource(R.string.rm_1),
+                registration = stringResource((R.string.registration_1))
+            )
+            CardStudents(
+                iconStudent = painterResource(R.drawable.pessoa1),
+                nameStudent = stringResource(R.string.nome_1),
+                iconRm = painterResource(R.drawable.rm),
+                rmStudent = stringResource(R.string.rm_1),
+                registration = stringResource((R.string.registration_1))
+            )
+            CardStudents(
+                iconStudent = painterResource(R.drawable.pessoa1),
+                nameStudent = stringResource(R.string.nome_1),
+                iconRm = painterResource(R.drawable.rm),
+                rmStudent = stringResource(R.string.rm_1),
+                registration = stringResource((R.string.registration_1))
+            )
+            CardStudents(
+                iconStudent = painterResource(R.drawable.pessoa1),
+                nameStudent = stringResource(R.string.nome_1),
+                iconRm = painterResource(R.drawable.rm),
+                rmStudent = stringResource(R.string.rm_1),
+                registration = stringResource((R.string.registration_1))
             )
         }
     }
