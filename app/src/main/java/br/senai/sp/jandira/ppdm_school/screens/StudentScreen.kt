@@ -149,6 +149,7 @@ fun StudentScreen() {
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
+                        .background(Color(0xFF9FA9E1))
                 ) {
                     Card(
                         modifier = Modifier
@@ -161,7 +162,7 @@ fun StudentScreen() {
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth(),
-                            horizontalAlignment = Alignment.CenterHorizontally
+                            horizontalAlignment = Alignment.CenterHorizontally,
                         ) {
                             Text(
                                 modifier = Modifier
@@ -174,7 +175,14 @@ fun StudentScreen() {
                                 fontWeight = FontWeight.Normal
                             )
                         }
-                        GraficoStudent()
+                        Column(
+                            modifier = Modifier
+                                .fillMaxSize(),
+                            verticalArrangement = Arrangement.SpaceEvenly,
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ){
+                            GraficoStudent()
+                        }
                     }
                 }
             }
